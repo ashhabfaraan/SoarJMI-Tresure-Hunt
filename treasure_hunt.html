@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Treasure Hunt</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #11a9537e;
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 400px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .logo {
+            width: 120px;
+            max-width: 100%;
+            margin-bottom: 20px;
+        }
+
+        form {
+            background: #15f33e2e;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        input {
+            width: 100%;
+            padding: 14px;
+            font-size: 16px;
+            margin-bottom: 15px;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"] {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:active {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <img 
+            src="https://media.licdn.com/dms/image/v2/D560BAQG6xupD-VJyrA/company-logo_200_200/B56ZZYnDekGQAI-/0/1745243356962/soarx_jmi_logo?e=1772064000&v=beta&t=00fKDeMxURz7RTL5N4YVRJlMoD2-_qDAhPI3rYA2Uxk" 
+            alt="SoarJMI Logo"
+            class="logo"
+        >
+
+        <form>
+            <input 
+                type="text"
+                inputmode="numeric"
+                pattern="[0-9]*"
+                placeholder="Enter your code"
+                required
+            >
+
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+
+</body>
+</html>
