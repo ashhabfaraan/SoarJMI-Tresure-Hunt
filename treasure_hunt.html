@@ -10,98 +10,91 @@
     <link href="https://fonts.googleapis.com/css2?family=Pirata+One&display=swap" rel="stylesheet">
 
     <style>
-        body {
-            margin: 0;
-            min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-family: Arial, sans-serif;
-            position: relative;
-            overflow: hidden;
-        }
+    body {
+        margin: 0;
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: Arial, sans-serif;
+        background:
+            linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+            url("treasure_hunt.webp");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
 
-        body {
-            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-                url("treasure_hunt.jpg");
-        }
+    .container {
+        width: 90%;
+        max-width: 250px;   /* reduced size */
+        padding: 10px;      /* reduced padding */
+        text-align: center;
+        background: rgba(255, 244, 214, 0.95);
+        border-radius: 14px;
+        box-shadow: 0 0 30px rgba(255, 215, 0, 0.6);
+    }
 
+    .title {
+        font-family: 'Pirata One', cursive;
+        font-size: 30px;   /* smaller for mobile */
+        color: #8b5a2b;
+        margin-bottom: 15px;
+        text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
+    }
 
+    .logo {
+        width: 90px;      /* smaller logo */
+        margin-bottom: 15px;
+    }
 
+    input[type="text"] {
+        width: 100%;
+        padding: 12px;
+        font-size: 15px;
+        margin-bottom: 12px;
+        border-radius: 8px;
+        border: 2px solid #8b5a2b;
+        background-color: #fff8dc;
+        box-sizing: border-box;
+    }
 
-        /* Dark overlay for readability */
-        body::after {
-            content: "";
-            position: absolute;
-            inset: 0;
-            background: rgba(0, 0, 0, 0.4);
-            z-index: -1;
-        }
+    input[type="submit"] {
+        width: 100%;
+        padding: 12px;
+        font-size: 16px;
+        border-radius: 8px;
+        border: none;
+        background: linear-gradient(45deg, #8b5a2b, #daa520);
+        color: white;
+        cursor: pointer;
+        font-weight: bold;
+        transition: 0.3s ease;
+    }
 
-        .container {
-            width: 100%;
-            max-width: 420px;
-            padding: 30px;
-            text-align: center;
-            background: rgba(255, 244, 214, 0.95);
-            border-radius: 15px;
-            box-shadow: 0 0 40px rgba(255, 215, 0, 0.6);
-        }
+    input[type="submit"]:hover {
+        transform: scale(1.03);
+        box-shadow: 0 0 15px rgba(255, 215, 0, 0.8);
+    }
 
+    .hint {
+        font-size: 13px;
+        margin-top: 8px;
+        color: #5a3e1b;
+    }
+
+    /* Extra small phones */
+    @media (max-width: 360px) {
         .title {
-            font-family: 'Pirata One', cursive;
-            font-size: 38px;
-            color: #8b5a2b;
-            margin-bottom: 20px;
-            text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
+            font-size: 26px;
         }
 
         .logo {
-            width: 110px;
-            margin-bottom: 20px;
+            width: 75px;
         }
+    }
+</style>
 
-        input[type="text"] {
-            width: 100%;
-            padding: 14px;
-            font-size: 16px;
-            margin-bottom: 15px;
-            border-radius: 8px;
-            border: 2px solid #8b5a2b;
-            outline: none;
-            background-color: #fff8dc;
-            box-sizing: border-box;
-        }
-
-        input[type="text"]:focus {
-            border-color: #daa520;
-            box-shadow: 0 0 10px rgba(218, 165, 32, 0.6);
-        }
-
-        input[type="submit"] {
-            width: 100%;
-            padding: 14px;
-            font-size: 18px;
-            border-radius: 8px;
-            border: none;
-            background: linear-gradient(45deg, #8b5a2b, #daa520);
-            color: white;
-            cursor: pointer;
-            font-weight: bold;
-            transition: 0.3s ease;
-        }
-
-        input[type="submit"]:hover {
-            transform: scale(1.05);
-            box-shadow: 0 0 20px rgba(255, 215, 0, 0.8);
-        }
-
-        .hint {
-            font-size: 14px;
-            margin-top: 10px;
-            color: #5a3e1b;
-        }
-    </style>
 </head>
 
 <body>
